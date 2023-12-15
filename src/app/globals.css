@@ -2,10 +2,160 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ----Fysh Animations--- */
+@keyframes breathe {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes moveHead {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+}
+
+@keyframes moveArms {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(1.5px);
+  }
+}
+
+@keyframes slamIn {
+  0% {
+    transform: translateY(-250vh) scale(0.01); /* Start above the screen, scaled down, rotated */
+  }
+  100% {
+    transform: translateY(0) scale(1); /* Finishes landing upright */
+  }
+}
+
+.animate-slamIn {
+  animation: slamIn 0.5s; /* Adjust timing as needed */
+}
+
+@keyframes headLand {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  10% {
+    transform: translateY(10vh) scale(1.2);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes armsRaise {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes legsRaise {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes torsoRaise {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes followMe {
+  0% {
+    transform: scale(1) translateY(0);
+    opacity: 100%;
+  }
+  100% {
+    transform: scale(1.2) translateY(150vh);
+    opacity: 0%;
+  }
+}
+
+.follow-me {
+  animation: followMe 3s ease;
+}
+
+.stand-up-head {
+  animation: headLand 2s ease-in;
+}
+.stand-up-arms {
+  animation: armsRaise 2s ease-in;
+}
+.stand-up-legs {
+  animation: legsRaise 2s ease-in;
+}
+.stand-up-torso {
+  animation: torsoRaise 2s ease-in;
+}
+
+.torso {
+  animation: breathe 3s ease-in-out infinite;
+}
+
+.head {
+  animation: moveHead 3s ease-in-out infinite;
+}
+
+.arms {
+  animation: moveArms 3s ease-in-out infinite;
+}
+/* ----Fysh Animations End--- */
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+
+.reveal {
+  animation: reveal 1s ease-in;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 @media (prefers-color-scheme: dark) {
