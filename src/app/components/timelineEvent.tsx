@@ -23,6 +23,7 @@ const TimelineEvent = ({
         if (ref.current) {
           const { top, height } = ref.current.getBoundingClientRect();
           const windowHeight = window.innerHeight;
+          const windowWidth = window.innerWidth;
           const elementCenter = top + height / 2;
           const windowCenter = windowHeight / 2;
           const distanceFromCenter = Math.abs(elementCenter - windowCenter);
@@ -31,7 +32,9 @@ const TimelineEvent = ({
           let scale = 1 - distanceFromCenter / windowHeight;
           scale = Math.max(0.5, Math.min(1, scale)); // Clamp the scale between 0.5 and 1
 
-          const maxTranslate = 250; // Greater value for a larger initial offset
+          // Use a smaller value for narrower screens
+          const maxTranslate = windowWidth < 640 ? 50 : 250;
+
           // Adjust translateFactor for a more distinct sliding effect
           const translateFactor =
             1 - Math.pow(distanceFromCenter / windowCenter, 2);
@@ -63,7 +66,7 @@ const TimelineEvent = ({
         position === "left" ? "justify-start" : "justify-end"
       } my-4`}
     >
-      <div className={`w-1/3 bg-secondary rounded-lg shadow-lg p-4`}>
+      <div className={`w-5/6 md:w-1/3 bg-secondary rounded-lg shadow-lg p-4`}>
         <h2 className="text-xl font-bold text-quaternary">{title}</h2>
         <p className="text-tertiary ">{year}</p>
         <p className="text-primary mt-2">{content}</p>
