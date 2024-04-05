@@ -32,7 +32,7 @@ const TimelineContainer = () => {
           }
           position="right"
         />
-        <TimelineEvent
+        {/* <TimelineEvent
           title="First experience with LSD"
           year="2013"
           content="Simply, an unsought cure for depression. From a state of almost apathy and deep
@@ -41,8 +41,8 @@ const TimelineContainer = () => {
           of card, placed in the mouth. I was given a night of friendship, conversation, laughter,
           play. I was given a new perspective, a joy, and so from this ailment, I was cured."
           position="left"
-        />
-        <TimelineEvent
+        /> */}
+        {/* <TimelineEvent
           title="Second LSD experience"
           year="2014"
           content="A deeper understanding of both self perception and the futility of being concerned
@@ -50,7 +50,7 @@ const TimelineContainer = () => {
           what you have, the friends, the time, this. A deep realisation that things are as they should
           be, to relax, allow, enjoy."
           position="right"
-        />
+        /> */}
         <TimelineEvent
           title="First Vipassana meditation retreat"
           year="2016"
@@ -64,7 +64,7 @@ const TimelineContainer = () => {
           revealed, illusory and self generated."
           position="left"
         />
-        <TimelineEvent
+        {/* <TimelineEvent
           title="First surf post Vipassana"
           year="2016"
           content="Truly, heaven. I was seeking nothing, fully present. Not just surfing, 
@@ -73,7 +73,7 @@ const TimelineContainer = () => {
           being one with the ocean. And also recognising in others something that before 
           had been in me, desperation, a constant focus on the future. But not now."
           position="right"
-        />
+        /> */}
         <TimelineEvent
           title="MSc in Evolutionary and Adaptive Systems"
           year="2016-2017"
@@ -90,14 +90,14 @@ const TimelineContainer = () => {
           This was controlled by eye movements and head direction."
           position="right"
         />
-        <TimelineEvent
+        {/* <TimelineEvent
           title="First surf post second Vipassana"
           year="2017"
           content="Truly, hell. I was seeking the previous experience, forcing an attempt at presence. 
           Not surfing, struggling. Every stroke, every paddle, an effort. The wind(harsh), 
           the water(cold). And then, catching a wave, stumbling, trying, at odds with nature."
           position="left"
-        />
+        /> */}
         <TimelineEvent
           title="Ultimate web designer & developer course"
           year="2018"
@@ -152,7 +152,7 @@ const TimelineContainer = () => {
           C++."
           position="right"
         />
-        <TimelineEvent
+        {/* <TimelineEvent
           title="First psilocybin experience"
           year="2022"
           content="A deeply healing experience where I was shown the importance of the body,
@@ -160,7 +160,7 @@ const TimelineContainer = () => {
            this part of life. Shown how the body stores emotional pain, and that this pain, 
            this tension, is simply where love is blocked, where love can't find a way through."
           position="left"
-        />
+        /> */}
         <TimelineEvent
           title="200 hour Kundalini yoga teacher training"
           year="2022"
@@ -172,7 +172,7 @@ const TimelineContainer = () => {
           experience."
           position="right"
         />
-        <TimelineEvent
+        {/* <TimelineEvent
           title="Approx 50mg of psilocybin"
           year="2022"
           content="Influenced by other's fears, in search of something greater, with a desire to bring back 
@@ -184,7 +184,7 @@ const TimelineContainer = () => {
           And yet, dispite their being no answer, still one was given: love. To return ready to give 
           love, share love, the cure for all ailments, true selfless love."
           position="left"
-        />
+        /> */}
         <TimelineEvent
           title="Technical content writer"
           year="2022"
@@ -212,6 +212,25 @@ const TimelineContainer = () => {
             </>
           }
           position="left"
+        />
+        <TimelineEvent
+          title="MyWorld Website"
+          year="2024"
+          content={
+            <>
+              Lead/Solo Dev on a website for a scholarship grant scheme,
+              featuring a 3d interactive globe. NextJS/THREEJS/Typescript.{" "}
+              <a
+                className="font-bold underline"
+                href="myworldfilmgrant.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Click here!
+              </a>
+            </>
+          }
+          position="right"
         />
       </div>
     </div>
